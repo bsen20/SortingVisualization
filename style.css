@@ -1,0 +1,93 @@
+.mySlides {
+  display: none;
+}
+
+body {
+  background-color: rgb(255, 235, 211);
+  font-family: Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.head {
+  margin-top: 20px;
+  margin-right: 20vw;
+  margin-left: 20vw;
+  text-align: center;
+  font-size: 30px;
+  background-color: #0fb997;
+  color: white;
+  border-radius: 19px;
+  font-weight: bolder;
+}
+
+.data-container {
+  width: 100vw;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  left: 20vw;
+  /* margin: 0 auto; */
+}
+.bar_container {
+  width: 100vw;
+  position: relative;
+  top: 200px;
+}
+
+.bar {
+  width: 28px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: rgb(241, 118, 206);
+  transition: 0.2s all ease;
+}
+button {
+  cursor: pointer;
+}
+button:hover {
+  background-color: chartreuse;
+  transition: 0.2s all ease-in-out;
+}
+.bar__id {
+  position: absolute;
+  top: -24px;
+  width: 100%;
+  text-align: center;
+}
+.btn1 {
+  padding: 12px;
+  font-weight: bolder;
+  background-color: #605f63;
+  border-radius: 10px;
+  color: white;
+  font-size: 16px;
+  border: white;
+}
+.btn2 {
+  padding: 12px;
+  font-weight: bolder;
+  background-color: #0fb997;
+  border-radius: 10px;
+  color: white;
+  font-size: 16px;
+  border: white;
+  cursor: pointer;
+}
+.sorting_btns {
+  margin-top: 20px;
+  width: 100vw;
+  display: flex;
+  justify-content: space-evenly;
+}
+.generate_btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
