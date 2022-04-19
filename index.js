@@ -78,7 +78,7 @@ async function BubbleSort(delay = 50) {
 
       var value1 = Number(bars[j].childNodes[0].innerHTML);
       var value2 = Number(bars[j + 1].childNodes[0].innerHTML);
-      console.log(value1, value2);
+      // console.log(value1, value2);
       if (value1 > value2) {
         var temp1 = bars[j].style.height;
         var temp2 = bars[j].childNodes[0].innerText;
@@ -110,6 +110,50 @@ async function BubbleSort(delay = 50) {
   document.getElementById("Button3").disabled = false;
   document.getElementById("Button3").style.backgroundColor = "0fb997";
 }
+async function InsertionSort(delay = 200) {
+  let bars = document.querySelectorAll(".bar");
+  bars[0].style.backgroundColor = " rgb(49, 226, 13)";
+  for (var i = 1; i < bars.length; i += 1) {
+    var j = i - 1;
+    var key = parseInt(bars[i].childNodes[0].innerHTML);
+    var height = bars[i].style.height;
+    bars[i].style.backgroundColor = "darkblue";
+    await new Promise((resolve) =>
+      setTimeout(() => {
+        resolve();
+      }, 200)
+    );
+    while (j >= 0 && parseInt(bars[j].childNodes[0].innerHTML) > key) {
+      bars[j].style.backgroundColor = "darkblue";
+      bars[j + 1].style.height = bars[j].style.height;
+      bars[j + 1].childNodes[0].innerText = bars[j].childNodes[0].innerText;
+      j = j - 1;
+      await new Promise((resolve) =>
+        setTimeout(() => {
+          resolve();
+        }, 200)
+      );
+      for (var k = i; k >= 0; k--) {
+        bars[k].style.backgroundColor = " rgb(49, 226, 13)";
+      }
+    }
+    bars[j + 1].style.height = height;
+    bars[j + 1].childNodes[0].innerHTML = key;
+    await new Promise((resolve) =>
+      setTimeout(() => {
+        resolve();
+      }, 200)
+    );
+    bars[i].style.backgroundColor = " rgb(49, 226, 13)";
+  }
+
+  document.getElementById("Button1").disabled = false;
+  document.getElementById("Button1").style.backgroundColor = "#605f63";
+  document.getElementById("Button2").disabled = false;
+  document.getElementById("Button2").style.backgroundColor = "0fb997";
+  document.getElementById("Button3").disabled = false;
+  document.getElementById("Button3").style.backgroundColor = "#0fb997";
+}
 
 generatebars();
 
@@ -121,7 +165,7 @@ function disable() {
   document.getElementById("Button1").disabled = true;
   document.getElementById("Button1").style.backgroundColor = "#d8b6ff";
   document.getElementById("Button2").disabled = true;
-  document.getElementById("Button2").style.backgroundColor = "#d8b6ff";
+  document.getElementById("Button2").style.backgroundColor = "#0fb997";
   document.getElementById("Button3").disabled = true;
-  document.getElementById("Button3").style.backgroundColor = "#d8b6ff";
+  document.getElementById("Button3").style.backgroundColor = "#0fb997";
 }
