@@ -40,8 +40,11 @@ body {
 
 .bar {
   width: 28px;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
   position: absolute;
   left: 0;
+  text-align: center;
   bottom: 0;
   background-color: rgb(241, 118, 206);
   transition: 0.2s all ease;
