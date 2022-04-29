@@ -26,21 +26,37 @@
     </div>
 
     <div class="sorting_btns">
-      <button class="btn2" onclick="SelectionSort(),disable()" id="Button2">
+      <button
+        class="btn2"
+        onclick="SelectionSort(),disable()"
+        id="selectionBtn"
+      >
         Selection Sort
       </button>
-      <button class="btn2" onclick="BubbleSort(),disable()" id="Button3">
+      <button class="btn2" onclick="BubbleSort(),disable()" id="bubbleBtn">
         Bubble Sort
       </button>
-      <button class="btn2" onclick="InsertionSort(),disable()" id="Button3">
+      <button
+        class="btn2"
+        onclick="InsertionSort(),disable()"
+        id="insertionBtn"
+      >
         Insertion Sort
       </button>
-      <button class="btn2" onclick="QuickSort(),disable()" id="Button3">
+      <button class="btn2" onclick="QuickSort(),disable()" id="quickBtn">
         Quick Sort
+      </button>
+      <button class="btn2" onclick="MergeSort(),disable()" id="mergeBtn">
+        Merge Sort
       </button>
     </div>
   </body>
 
   <!-- linking index.js -->
   <script src="index.js"></script>
+  <script src="selection.js"></script>
+  <script src="bubble.js"></script>
+  <script src="quick.js"></script>
+  <script src="insertion.js"></script>
+  <script src="merge.js"></script>
 </html>
