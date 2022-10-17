@@ -3,7 +3,7 @@
 }
 
 body {
-  background-color: rgb(255, 235, 211);
+  background-color: cyan;
   font-family: Verdana, sans-serif;
   display: flex;
   flex-direction: column;
